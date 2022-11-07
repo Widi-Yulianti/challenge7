@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_moviesFragment_to_hilt_FavoriteFragment"
             app:destination="@id/hilt_FavoriteFragment" />
+        <action
+            android:id="@+id/action_moviesFragment_to_movieFragment2"
+            app:destination="@id/movieFragment2" />
     </fragment>
     <fragment
         android:id="@+id/hilt_ProfileFragment"
@@ -36,4 +39,9 @@
             android:id="@+id/action_profileFragment_to_moviesFragment"
             app:destination="@id/moviesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/movieFragment2"
+        android:name="com.example.mymovie.movies.MovieFragment"
+        android:label="MovieFragment"
+        tools:layout="@layout/fragment_movie"/>
 </navigation>

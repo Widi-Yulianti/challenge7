@@ -87,9 +87,9 @@ class MovieFragment : Fragment() {
             binding.btnFavorite.setOnClickListener{
                 _isChecked = !_isChecked
                 if (_isChecked) {
-                    viewModel.addToFavorite(id, movieName, moviePosterPath)
+                    viewModel.addToFavorite(id, movieName, moviePosterPath.toString())
                 } else {
-                    viewModel.removeFromFavorite(id, movieName, moviePosterPath)
+                    viewModel.removeFromFavorite(id, movieName, moviePosterPath.toString())
                 }
                 binding.btnFavorite.isChecked = _isChecked
             }

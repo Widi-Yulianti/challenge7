@@ -26,7 +26,7 @@ class MovieAdapter(var listMovie: List<ResponsePopularMovieItem>):
         holder.binding.movieContainer.setOnClickListener {
             var bundle = Bundle()
             bundle.putSerializable("datadetail",listMovie[position])
-            it.findNavController().navigate(R.id.action_moviesFragment_to_movieFragment, bundle)
+//            it.findNavController().navigate(R.id.action_moviesFragment_to_movieFragment, bundle)
 
         }
         holder.binding.movieTitle.text = listMovie[position].movieName

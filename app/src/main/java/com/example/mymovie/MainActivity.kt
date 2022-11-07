@@ -18,16 +18,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, MoviesFragment())
+                .commit()
+        }
+
 //        Toast.makeText(this, BuildConfig.BASE_URL, Toast.LENGTH_LONG).show()
 
     }
 
-    fun navigateToMovies() {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container, MoviesFragment())
-            .addToBackStack(MoviesFragment.getFragmentTag())
-            .commitAllowingStateLoss()
-    }
 
     fun navigateMovieView() {
         supportFragmentManager.beginTransaction()

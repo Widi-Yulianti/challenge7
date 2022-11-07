@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/YULLY/AndroidStudioProjects/MyMovie/app/src/free/res/layout/activity_main.xml" value="0.10643115942028986" />
+        <entry key="..\:/Users/YULLY/AndroidStudioProjects/MyMovie/app/src/free/res/layout/fragment_home.xml" value="0.10643115942028986" />
+        <entry key="..\:/Users/YULLY/AndroidStudioProjects/MyMovie/app/src/free/res/layout/fragment_movies.xml" value="0.10643115942028986" />
         <entry key="..\:/Users/YULLY/AndroidStudioProjects/MyMovie/app/src/main/res/drawable/bottom_gradient.xml" value="0.14" />
         <entry key="..\:/Users/YULLY/AndroidStudioProjects/MyMovie/app/src/main/res/drawable/favorite_toggle.xml" value="0.14" />
         <entry key="..\:/Users/YULLY/AndroidStudioProjects/MyMovie/app/src/main/res/drawable/ic_favorite.xml" value="0.14" />
