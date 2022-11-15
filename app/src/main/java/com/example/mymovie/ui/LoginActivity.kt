@@ -1,5 +1,6 @@
 package com.example.mymovie.ui
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -34,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
     private val existUsername = listOf<String>("shawn","peter","raul","mendes")
 
 
-
+    @SuppressLint("all")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)

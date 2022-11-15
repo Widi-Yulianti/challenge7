@@ -22,4 +22,7 @@
     <string name="name">Name</string>
     <string name="movie">Movie</string>
     <string name="repeat_password">Confirm Password</string>
+
+
+    tools:ignore="all"
 </resources>

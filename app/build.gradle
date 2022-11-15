@@ -57,7 +57,24 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
+
+    lint{
+        disable 'TypographyFractions', 'TypographyQoutes'
+        enable 'RtHarcoded', 'RtlCompat', 'RtlEnabled'
+        checkOnly 'NewApi', 'InlinedApi'
+        quiet true
+        abortOnError false
+        ignoreWarning true
+        checkDependencies true
+    }
+
+    lintOptions{
+        baseline file("lint-baseline.xml")
+    }
+
+
 }
 
 dependencies {

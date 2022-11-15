@@ -9,7 +9,8 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.LoginActivity"
+    tools:ignore="all">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
