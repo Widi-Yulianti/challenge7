@@ -1,6 +1,5 @@
-package com.example.moviesapp.ui
+package com.example.mymovie.ui
 
-import com.example.mymovie.ui.LoginActivity
 import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before
