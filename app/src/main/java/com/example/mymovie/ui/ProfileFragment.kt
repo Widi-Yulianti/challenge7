@@ -2,7 +2,6 @@ package com.example.mymovie.ui
 
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
@@ -13,16 +12,11 @@ import android.provider.MediaStore
 import android.provider.Settings
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
-import androidx.datastore.preferences.core.booleanPreferencesKey
-import androidx.datastore.preferences.preferencesDataStore
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.mymovie.R
@@ -34,7 +28,6 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.runBlocking
 
 
 @AndroidEntryPoint
@@ -47,8 +40,6 @@ class ProfileFragment : Fragment() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var viewModelLoginPref: LoginViewModel
 
-    private val existUsername = listOf<String>("shawn","peter","raul","mendes")
-    private val existName = listOf<String>("shawn","peter","raul","mendes")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -211,38 +202,4 @@ class ProfileFragment : Fragment() {
 
     }
 
-
-    fun validateProfileFragmentInput(
-        name: String,
-        username: String,
-        password: String,
-        repeatPassword: String,
-        age: String,
-        address: String
-    ): Boolean {
-        if (name.isEmpty() || username.isEmpty() || password.isEmpty() || age.isEmpty() || address.isEmpty()){
-            return false
-        }
-
-        if (username in existUsername) {
-            return false
-        }
-
-        if (password.length < 6) {
-            false
-        }
-
-        if (password.length > 50) {
-            false
-        }
-        if (password != repeatPassword){
-            return false
-        }
-
-        if (address in existName) {
-            return false
-        }
-
-        return true
-    }
 }

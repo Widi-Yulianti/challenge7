@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.mymovie.R
 import com.example.mymovie.databinding.ActivityRegisterBinding
 import com.example.mymovie.model.ViewModelUser
 import dagger.hilt.android.AndroidEntryPoint
@@ -13,8 +12,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding : ActivityRegisterBinding
-    private val existUsername = listOf<String>("shawn","peter","raul","mendes")
-    private val existName = listOf<String>("shawn","peter","raul","mendes")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,37 +54,4 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    fun validateRegistrationActivityInput(
-        name: String,
-        username: String,
-        password: String,
-        repeatPassword: String,
-        age: String,
-        address: String
-    ): Boolean {
-        if (name.isEmpty() || username.isEmpty() || password.isEmpty() || age.isEmpty() || address.isEmpty()){
-            return false
-        }
-
-        if (username in existUsername) {
-            return false
-        }
-
-        if (password.length < 6) {
-            false
-        }
-
-        if (password.length > 50) {
-            false
-        }
-        if (password != repeatPassword){
-            return false
-        }
-
-        if (address in existName) {
-            return false
-        }
-
-        return true
-    }
 }

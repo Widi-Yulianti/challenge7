@@ -1,13 +1,11 @@
 package com.example.mymovie.ui
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.mymovie.MainActivity
-import com.example.mymovie.R
 import com.example.mymovie.datastore.DataStoreManager
 import com.example.mymovie.model.LoginViewModel
 import com.example.mymovie.model.ViewModelFactory
@@ -21,7 +19,6 @@ import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 
 @AndroidEntryPoint
@@ -32,10 +29,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var analytics: FirebaseAnalytics
 
 
-    private val existUsername = listOf<String>("shawn","peter","raul","mendes")
-
-
-    @SuppressLint("all")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -120,26 +113,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun validateLoginActivityInput(
-        username: String,
-        password: String
-    ): Boolean {
-        if (username.isEmpty() || password.isEmpty()){
-            return false
-        }
 
-        if (username in existUsername) {
-            return false
-        }
-
-        if (password.length < 6) {
-            false
-        }
-
-        if (password.length > 50) {
-            false
-        }
-        return true
-    }
 
 }
