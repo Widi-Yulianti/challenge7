@@ -72,6 +72,7 @@ android {
 
     lintOptions{
         baseline file("lint-baseline.xml")
+        abortOnError false
     }
 
 
@@ -152,4 +153,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
 
+}
+
+kapt {
+    correctErrorTypes true
 }
