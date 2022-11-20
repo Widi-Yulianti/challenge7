@@ -36,4 +36,7 @@ jobs:
           path: app/build/outputs/apk/debug/
           destination: artifact-file
 
-  - ./gradlew assembleDebug
+          
+      - run:
+          name: generate apk
+          command: ./gradlew assembleDebug
